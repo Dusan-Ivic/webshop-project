@@ -129,7 +129,6 @@ namespace WebshopServer.Services
             }
 
             _mapper.Map(requestDto, user);
-            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password, BCrypt.Net.BCrypt.GenerateSalt());
 
             try
             {
